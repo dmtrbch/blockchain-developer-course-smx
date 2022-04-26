@@ -1,0 +1,9 @@
+site_name: SMX Academy Blockchain Developer Course
+repo_name: 'dmtrbch/blockchain-developer-course-smx'
+repo_url: https://github.com/dmtrbch/blockchain-developer-course-smx/
+edit_uri: tree/main/docs/
+theme:
+  name: material
+markdown_extensions:
+  - attr_list
+  - codehilite
