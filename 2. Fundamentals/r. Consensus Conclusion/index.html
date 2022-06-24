@@ -1,0 +1,2409 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+    
+    
+      
+        <title>Consensus Conclusion - SMX Academy Blockchain Developer Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#consensus-conclusion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SMX Academy Blockchain Developer Course" class="md-header__button md-logo" aria-label="SMX Academy Blockchain Developer Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SMX Academy Blockchain Developer Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Consensus Conclusion
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmtrbch/blockchain-developer-course-smx/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dmtrbch/blockchain-developer-course-smx
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SMX Academy Blockchain Developer Course" class="md-nav__button md-logo" aria-label="SMX Academy Blockchain Developer Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    SMX Academy Blockchain Developer Course
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmtrbch/blockchain-developer-course-smx/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dmtrbch/blockchain-developer-course-smx
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          1. Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/1.%20Why%20to%20Learn%20Blockchain/" class="md-nav__link">
+        Why To Learn Blockchain?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/2.%20How%20to%20be%20Successful%20in%20this%20Course/" class="md-nav__link">
+        How to be Successful in this Course
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/3.%20Keeping%20Up%20With%20Blockchain%20Development/" class="md-nav__link">
+        Keeping Up With Blockchain Development
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          2. Fundamentals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Fundamentals" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Fundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a.%20A%20Paper%20Blockchain/" class="md-nav__link">
+        A Paper Blockchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../b.%20Fundamentals/" class="md-nav__link">
+        Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c.%20Public%20Key%20Cryptography/" class="md-nav__link">
+        Public Key Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../d.%20Public%20Key%20Cryptography%20Additional/" class="md-nav__link">
+        Public Key Cryptography Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../e.%20Hashing/" class="md-nav__link">
+        Hashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../f.%20Hashing%20Additional/" class="md-nav__link">
+        Hashing Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../g.%20Digital%20Signatures/" class="md-nav__link">
+        Digital Signatures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../h.%20Digital%20Signatures%20Additional/" class="md-nav__link">
+        Digital Signatures Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../i.%20Consensus/" class="md-nav__link">
+        Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../j.%20Consensus%20Additional/" class="md-nav__link">
+        Distributed Coordination: Consensus Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k.%20Raft/" class="md-nav__link">
+        Raft Consensus Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../l.%20Trustless%20Consensus/" class="md-nav__link">
+        Trustless Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m.%20What%20is%20a%20Block/" class="md-nav__link">
+        What is a Block?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../n.%20Chain%20of%20Blocks/" class="md-nav__link">
+        A Chain of Blocks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../o.%20PoW%20in%20Ethereum/" class="md-nav__link">
+        Proof of Work in Ethereum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../p.%20Blockchain%20Fork/" class="md-nav__link">
+        What is a Blockchain Fork?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../q.%20More%20Forms%20of%20Consensus/" class="md-nav__link">
+        More Forms of Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Consensus Conclusion
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Consensus Conclusion
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-of-consensus-in-distributed-networks" class="md-nav__link">
+    Challenges of Consensus in Distributed Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    Additional Material
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../s.%20Mental%20Model%20for%20Basic%20Blockchain%20Architecture/" class="md-nav__link">
+        Mental Model for Basic Blockchain Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../t.%20Configurations%20for%20Different%20Blockchain%20Networks/" class="md-nav__link">
+        Configurations for Different Blockchain Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../u.%20Public%20and%20Private%20Blockchains/" class="md-nav__link">
+        Public and Private Blockchains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../v.%20When%20To%20Use%20a%20Blockchain/" class="md-nav__link">
+        When To Use a Blockchain?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../w.%20Bitcoin%20-%20History%20and%20Development/" class="md-nav__link">
+        Bitcoin: History and Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../x.%20Introduction%20to%20MetaMask/" class="md-nav__link">
+        Introduction to MetaMask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../y.%20How%20Does%20MetaMask%20Keep%20Your%20Keys%20Safe/" class="md-nav__link">
+        How Does MetaMask Keep Your Keys Safe?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          3. Ethereum Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Ethereum Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Ethereum Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/a.%20Ethereum%20History%20and%20Background/" class="md-nav__link">
+        Ethereum History and Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/b.%20Identity%20on%20Ethereum%20Externally%20Owned%20Accounts%20%28EOAs%29%20and%20Smart%20Contracts/" class="md-nav__link">
+        Identity on Ethereum: Externally Owned Accounts (EOAs) and Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/c.%20Generating%20Ethereum%20Addresses/" class="md-nav__link">
+        Generating Ethereum accounts in JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/d.%20Nodes/" class="md-nav__link">
+        Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/e.%20Transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/f.%20Gas%20and%20Fees/" class="md-nav__link">
+        Gas and Fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/g.%20Ethereum%20Structure/" class="md-nav__link">
+        Ethereum Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/h.%20Ethereum%20Networks/" class="md-nav__link">
+        Ethereum Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/i.%20Sending%20Transactions/" class="md-nav__link">
+        Sending Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/j.%20Merkle%20Trees/" class="md-nav__link">
+        Merkle Trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/k.%20Playing%20with%20Merkle%20Trees/" class="md-nav__link">
+        Playing with Merkle Trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/l.%20EIP-1559/" class="md-nav__link">
+        EIP-1559
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/m.%20What%20is%20an%20Ethereum%20Client%20Running%20Go-Ethereum%20%28Geth%29/" class="md-nav__link">
+        What is an Ethereum Client? Running Go-Ethereum (Geth)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          4. Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Smart Contracts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/01.%20Where%20Do%20Smart%20Contracts%20Fit%20in%20Our%20Mental%20Model/" class="md-nav__link">
+        Where Do Smart Contracts Fit in Our Mental Model?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/02.%20Smart%20Contracts%20and%20the%20EVM/" class="md-nav__link">
+        Smart Contracts and the EVM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/03.%20Introduction%20to%20Remix/" class="md-nav__link">
+        Introduction to Remix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/04.%20Introduction%20to%20Truffle%20Suite%20%E2%80%94%20Part%201/" class="md-nav__link">
+        Introduction to Truffle Suite — Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/05.%20Introduction%20to%20Truffle%20Suite%20%E2%80%94%20Part%202/" class="md-nav__link">
+        Introduction to Truffle Suite — Part 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/06.%20Solidity%20Background%20and%20Context/" class="md-nav__link">
+        Solidity Background and Context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/07.%20Solidity%20Data%20Types%20and%20Variables/" class="md-nav__link">
+        Solidity Data Types and Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/08.%20Solidity%20Functions/" class="md-nav__link">
+        Solidity Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/09.%20Solidity%20Storage%20and%20Memory/" class="md-nav__link">
+        Solidity Storage and Memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/10.%20Solidity%20Contract%20Structure/" class="md-nav__link">
+        Solidity Contract Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/11.%20Smart%20Contract%20ABI/" class="md-nav__link">
+        Smart Contract ABI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/12.%20Solidity%20Events%20and%20Logs/" class="md-nav__link">
+        Solidity Events and Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/13.%20Solidity%20Factory%20Contracts/" class="md-nav__link">
+        Solidity Factory Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/14.%20Python%20in%20Ethereum%20Background%20and%20Context/" class="md-nav__link">
+        Python in Ethereum: Background and Context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/15.%20Vyper%20Overview/" class="md-nav__link">
+        Vyper Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/16.%20Design%20Patterns%20Introductory%20Smart%20Contracts/" class="md-nav__link">
+        Design Patterns: Introductory Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/17.%20Inter-Contract%20Execution%20%E2%80%94%20Part%201/" class="md-nav__link">
+        Inter-Contract Execution — Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/18.%20Inter-Contract%20Execution%20%E2%80%94%20Part%202/" class="md-nav__link">
+        Inter-Contract Execution — Part 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/19.%20Inheritance%20and%20Interfaces/" class="md-nav__link">
+        Inheritance and Interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/20.%20Off-Chain%20Oracles/" class="md-nav__link">
+        Off-Chain Oracles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/21.%20Access%20Control%20Design%20Patterns/" class="md-nav__link">
+        Access Control Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/22.%20General%20Finance%20and%20Access%20Control%20Multi-Sig%20Tutorial/" class="md-nav__link">
+        General Finance: Multi-Sig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/23.%20Upgradable%20Contracts/" class="md-nav__link">
+        Upgradable Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/24.%20Additional%20Material%20Upgradable%20Contracts/" class="md-nav__link">
+        Additional Material: Upgradable Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/25.%20Optimizing%20Gas/" class="md-nav__link">
+        Optimizing Gas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/26.%20Smart%20Contract%20System%20Design/" class="md-nav__link">
+        Smart Contract System Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/27.%20Tutorial%20Proof%20of%20Existence/" class="md-nav__link">
+        Writing a Smart Contract (Proof of Existence Exercise)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/28.%20Smart%20Contract%20Best%20Practices/" class="md-nav__link">
+        Smart Contract Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/29.%20Solidity%20Pitfalls%20and%20Attacks/" class="md-nav__link">
+        Solidity Pitfalls and Attacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/30.%20Smart%20Contract%20Pitfalls%20and%20Attacks/" class="md-nav__link">
+        Smart Contract Pitfalls and Attacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/31.%20Smart%20Contract%20Safety%20Checklist/" class="md-nav__link">
+        Smart Contract Safety Checklist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/32.%20tx.origin%20Attack%20Demo/" class="md-nav__link">
+        TxOrigin Attack (SWC-115)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/33.%20Denial%20of%20Service%20Attack%20Example/" class="md-nav__link">
+        DoS Attack Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/34.%20Reentrancy%20Attack%20Example/" class="md-nav__link">
+        Reentrancy Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/35.%20Integer%20Under-Overflow%20Example/" class="md-nav__link">
+        Integer Over / Underflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/36.%20Security%20Introduction%20to%20Diligence%2C%20MythX%20and%20Scribble/" class="md-nav__link">
+        Security: Introduction to Diligence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/37.%20Other%20Security%20Options/" class="md-nav__link">
+        Other Security Options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          5. Developer Tooling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Developer Tooling" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Developer Tooling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/01.%20Where%20Do%20Users%20Fit%20in%20Our%20Mental%20Model/" class="md-nav__link">
+        Where Do Users Fit in Our Mental Model?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/02.%20Features%20of%20Decentralized%20Application%20Development/" class="md-nav__link">
+        Features of Decentralized Application Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/03.%20Traditional%20vs%20Decentralized%20Development/" class="md-nav__link">
+        Traditional vs Decentralized Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/04.%20Agnostic%20Developer%20Workflow/" class="md-nav__link">
+        Blockchain Agnostic Developer Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/05.%20Web%203%20Javascript%20Libraries%20%28Web3.js%20and%20ethers.js%29/" class="md-nav__link">
+        Web 3 JavaScript Libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/06.%20Connecting%20to%20a%20Smart%20Contract%20Using%20Web3js/" class="md-nav__link">
+        Connecting to a Smart Contract Using Web3.js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/07.%20Introduction%20to%20Infura/" class="md-nav__link">
+        Introduction to Infura
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/08.%20TDD%20and%20Truffle%20Tests/" class="md-nav__link">
+        Testing, 1, 2, 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/09.%20Truffle%20Debugger%2C%20Configuration%2C%20Mainnet%20Forking/" class="md-nav__link">
+        Squashing Bugs with the Debugger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/10.%20Wire%20up%20the%20React%20app%20with%20Drizzle/" class="md-nav__link">
+        Wire up the React app with Drizzle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/11.%20Other%20Development%20Tools%20Hardhat%2C%20Scaffold-Eth%2C%20Brownie/" class="md-nav__link">
+        Other Development Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          6. Second Order Effects (DeFi and DAOs)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Second Order Effects (DeFi and DAOs)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Second Order Effects (DeFi and DAOs)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/01.%20Second-Order%20Effects/" class="md-nav__link">
+        Second-Order Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/02.%20What%20is%20DeFi/" class="md-nav__link">
+        What is DeFi?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/03.%20What%20are%20Stablecoins/" class="md-nav__link">
+        What are Stablecoins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/04.%20NFTs%20More%20than%20Solidity%20Code/" class="md-nav__link">
+        NFTs: More than Solidity Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/05.%20What%20are%20Wrapped%20Tokens/" class="md-nav__link">
+        What are Wrapped Tokens?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/06.%20What%20are%20DEXes/" class="md-nav__link">
+        What are DEXes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/07.%20Automated%20Market%20Makers%20-%20AMM/" class="md-nav__link">
+        Automated Market Makers - AMM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/08.%20Request%20for%20Quote/" class="md-nav__link">
+        Request for Quote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/09.%20Oracles%20in%20DeFi/" class="md-nav__link">
+        Oracles in DeFi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/10.%20DeFi%20Lending%20Markets/" class="md-nav__link">
+        DeFi Lending Markets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/11.%20What%20are%20Governance%20Tokens/" class="md-nav__link">
+        What are Governance Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/12.%20Introduction%20to%20MetaMask%20Swaps/" class="md-nav__link">
+        Introduction to MetaMask Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/13.%20What%20are%20DAOs/" class="md-nav__link">
+        What are DAOs?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/14.%20Build%20a%20DAO/" class="md-nav__link">
+        Build a DAO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6.%20Second-Order%20Effects%20%28DeFi%20and%20DAOs%29/15.%20Manage%20a%20DAO/" class="md-nav__link">
+        Manage a DAO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          7. Additional Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Additional Topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Additional Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/01.%20Introduction%20to%20IPFS/" class="md-nav__link">
+        Introduction to IPFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/02.%20Filecoin/" class="md-nav__link">
+        Filecoin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/03.%20Ethereum%20Name%20Services/" class="md-nav__link">
+        Ethereum Name Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/04.%20The%20Graph/" class="md-nav__link">
+        The Graph
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/05.%20Zero-Knowledge%20Proofs/" class="md-nav__link">
+        Zero-Knowledge Proofs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          8. Layer 2 (L2) or Scalability Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="8. Layer 2 (L2) or Scalability Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          8. Layer 2 (L2) or Scalability Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/01.%20Overview%20of%20L2%20Solutions/" class="md-nav__link">
+        Intro to Scalability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/02.%20Types%20of%20L2%20Solutions/" class="md-nav__link">
+        Types of Scaling Solutions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/03.%20Rubric%20for%20Evaluating%20L2%20Solutions/" class="md-nav__link">
+        Rubric for Analyzing Scalability Solutions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/04.%20L2%20Examples%20Optimism/" class="md-nav__link">
+        Optimism
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/05.%20L2%20Examples%20Arbitrum/" class="md-nav__link">
+        Arbitrum Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/06.%20Crosschain%20and%20Interoperability/" class="md-nav__link">
+        Crosschain Communication and Blockchain Interoperability
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          9. Ethereum 2.0 or The Merge
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9. Ethereum 2.0 or The Merge" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          9. Ethereum 2.0 or The Merge
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/03.%20Future%20Considerations/" class="md-nav__link">
+        Future Considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/1.%20History%20and%20Roadmap/" class="md-nav__link">
+        A Brief History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/2.%20Key%20Terms/" class="md-nav__link">
+        Key Terms for Ethereum 2.0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#challenges-of-consensus-in-distributed-networks" class="md-nav__link">
+    Challenges of Consensus in Distributed Networks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-material" class="md-nav__link">
+    Additional Material
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/dmtrbch/blockchain-developer-course-smx/tree/main/docs/2. Fundamentals/r. Consensus Conclusion.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="consensus-conclusion">Consensus Conclusion</h1>
+<p>Hopefully by now you feel like you have a sense of how distributed consensus works in a traditional network and how blockchains have innovated consensus protocols. While cryptographic primitives allow blockchain users to secure and validate current transactions, blockchain consensus protocols allow for a blockchain network to maintain a public ledger (the global state of the blockchain) in a decentralized way.</p>
+<h2 id="challenges-of-consensus-in-distributed-networks">Challenges of Consensus in Distributed Networks</h2>
+<p>While blockchain consensus protocols have made great strides in decentralized networks, there are still some unsolved issues they're facing. Some of these (like the CAP theorem and forks) affect all general distributed networks while others, like Miner Extracted Value and 51% attacks, are specific to public blockchains. Here's a sampling and brief description of these challenges.</p>
+<ul>
+<li><strong>Forks</strong> As we mentioned in a previous section, Proof of Work and other blockchain consensus mechanisms can lead to network forks (Note: In general computing networking, forks are also called <em>partitions</em>). Some of these forks are voluntary (such as network upgrades), accidental (a node receives two valid but different new blocks) or adversarial (network participants purposefully breakaway from the main network to create a separate chain). While forks are common in all distributed systems, with blockchain networks they can be particuarly painful but are also necessary update mechanisms.</li>
+<li><strong>Network Size</strong> The <a href="https://vitalik.ca/general/2021/04/07/sharding.html">Scalability Trilemma</a> details the different elements a blockchain needs to balance when it grows. Maintaining scalability and security relies on keeping the network size manageable. If the network size is too large, the equipment needed to run a full node is too much for an individual and leads to the enormous mining rigs we now see with Proof of Work blockchains. There are developments with Ethereum clients, like Geth's <a href="https://blog.ethereum.org/2021/03/03/geth-v1-10-0/">snapshots</a>, which reduce the amount of space needed for clients. There is also a push to for <a href="https://www.reddit.com/r/ethereum/comments/m0tqz5/making_the_ecosystem_more_lightclient_friendly/">light clients,</a> or clients that can run on mobile phones or a browser.</li>
+<li><strong><a href="https://en.wikipedia.org/wiki/CAP_theorem">CAP Theorem</a></strong> This is a fairly technical concept and can be challenging to understand. To put it simply, the CAP Theorem states that when a distributed network forks (also called a <em><a href="https://en.wikipedia.org/wiki/Network_partition">partition</a></em>), the network must either sacrifice consistency or availability. For example, if a blockchain network forks / partitions into two separate chains, you cannot expect those chains to both continue to mine new transactions (<em>Availability</em>) and stay consistent (<em>Consistency</em>) with each other. You don't need to be an expert in the CAP theorem, really just be aware of its existence and generally how it affects distributed networks. If you'd like to learn more, please see the links in "Additional Material" below.</li>
+<li><strong>Scalability</strong> As we've mentioned before, blockchain consensus mechanisms, particularly Proof of Work, are limited by the amount of transactions they can process. If the block size (the amount of transactions processed) increases, then mining will become more centralized and only available to those with significant resources. However, the current transaction throughput (the amount of transactions processed) is not enough to compete against current mainstream financial payment mechanisms. There are significant challenges, mainly how to make Ethereum more light-client friendly. Meaning: how can we reduce the amount of resources needed to provide decentralized consensus?</li>
+<li><strong>51% attacks</strong> In "11. Calculations" of the Bitcoin whitepaper, Nakamoto discusses the possibility of something called a "51% attack". This is the mathematical possibility of a malicious actor, who controls 51% or more of the network's hash rate, to both reorder some recent blocks and create a new, valid block including those tampered transactions. To be clear, this has not happened with Bitcoin or any major network, but it does exist as a possibility. Also, controlling 51% of a network's hash rate is only the entrance fee for doing such an attack. It also requires an enormous amount of coordination and subversion to make sure the attack is not noticed. Last, Proof of Work provides an economic incentive for the malicious actor with over 51% of the mining rate to actually produce <em>valid</em> blocks, rather than trying a re-organization attack.</li>
+<li><strong>Miner Extracted Value</strong> This is a more recent concern in the Ethereum community and may be too technical for this part of the course so no worries if you don't get this yet. Put simply, a user may increase the miner's fee of a transaction to entice a miner to include the transaction in a block. That user can use this "frontrunning" effect to target users making sophisticated trades. With the increasing sophistication of Ethereum transactions, many feel MEV poses as serious issue to the ecosystem. Please see links below for more resources if you're interested.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Blockchain consensus protocols, as kicked off by Proof of Work but including Proof of Stake and others, are the last primitive we need in our mental model to complete our blockchain framework. Now that we have both cryptography and distributed computing in our toolkit, we will now see how we can build a generalizable framework to understanding almost any blockchain network we encounter.</p>
+<h2 id="additional-material">Additional Material</h2>
+<p>### Introductory</p>
+<ul>
+<li><a href="https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274">Article: The Meaning of Decentralization</a></li>
+<li><a href="https://vitalik.ca/general/2021/04/07/sharding.html">Article: Sharding</a> Discusses the scalability trilemma</li>
+<li><a href="https://blog.ethereum.org/2021/03/03/geth-v1-10-0/">Release Notes: Geth 1.10.0</a> Describes the snapshot feature implemented in Geth</li>
+<li><a href="https://www.reddit.com/r/ethereum/comments/m0tqz5/making_the_ecosystem_more_lightclient_friendly/">Reddit: Making Ethereum More Lightclient Friendly</a></li>
+<li><a href="https://dean.eigenmann.me/blog/2020/02/17/cap-theorem/">Article: The CAP Theorem (Dean Eigenmann)</a> Another great post from the Distributed Systems newsletter describing the CAP theorem in a general way. Dean discusses how CAP theorem is particularly important with e-commerce like Amazon.</li>
+<li><a href="https://www.the-paper-trail.org/page/cap-faq/">Article: The CAP FAQ</a> A nice introductory article requiring some network knowledge.</li>
+<li><a href="https://ethereum.org/en/eth2/vision/">Article: Eth2 Vision: The Challenge of Decentralized Scaling</a> Scroll down a bit to see a diagram showing the "scalability trilemma"</li>
+<li><a href="https://www.reddit.com/r/ethereum/comments/m0tqz5/making_the_ecosystem_more_lightclient_friendly/">Forum: How to Make the Ecosystem more Light-Client Friendly</a> A Reddit discussion about Ethereum light-clients from 2021.</li>
+<li><a href="https://dankradfeist.de/ethereum/2021/05/20/what-everyone-gets-wrong-about-51percent-attacks.html">Article: What Everyone Gets Wrong about 51% Attacks (Dankrad Feist)</a> General discussion around 51% attacks, what they are, what they're not, and how Proof of Stake creates checkpoints which could avoid an adversarial re-organization attack.</li>
+<li><a href="https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752">Article: Flashbots: Frontrunning the MEV Crisis</a> A great introductory discussion by the Flashbots research group dedicated to issue of Miner Extracted Value.</li>
+<li><a href="https://explore.flashbots.net/">Interactive: Explore MEV in Real-time</a> A visualization put together by Flashbots to document what they call MEV in real-time.</li>
+<li><a href="https://www.coindesk.com/ethereum-mev-frontrunning-solutions">Article: Why Ethereum’s MEV Problem Is Way Worse Than You Think</a> Opinion article describing the potential future problems facing Ethereum if it doesn't address Miner Extracted Value issues.</li>
+<li><a href="https://youtu.be/s3nACF7uVZw?t=405">Video: WTF is MEV?</a> Introduction to Miner Extracted Value from Charlie Noyes at a MEV Summit. This video starts at his talk but also includes the rest of the summit, which you don't have to watch!</li>
+<li><a href="https://www.youtube.com/watch?v=lXq0eU8viFQ">Video: MEV Walkthrough with FlashBots</a> Another walkthrough of MEV from Flashbots</li>
+</ul>
+<p>### Advanced: Distributed Systems</p>
+<ul>
+<li><a href="https://dancres.github.io/Pages/">Wiki: Distributed Systems Reading List</a> Strong technical and academic discussion around distributed systems</li>
+<li><a href="https://how.complexsystems.fail/">Article: How Complex Systems Fail</a> A series of simple statements referring to the management of chaos in complex systems. Highly generalized, but still has a number of gems.</li>
+<li><a href="https://fly.io/blog/building-a-distributed-turn-based-game-system-in-elixir/">Tutorial: Building a Distributed Turn-Based Game System</a> Fun tutorial around using distributed system language Elixir.</li>
+<li><a href="https://en.wikipedia.org/wiki/Beer_distribution_game">Wikipedia: Beer Distribution Game</a> A cute, general educational game teaching about the challenges of a distributed system using a common supply chain scenario.</li>
+<li><a href="https://eth.wiki/sharding/Sharding-FAQs">Wiki: Sharding FAQ (Ethereum Foundation)</a> First mention of the "scalability trilemma" a bit technical, however!</li>
+<li><a href="https://codahale.com/you-cant-sacrifice-partition-tolerance/">Article: You Can't Sacrifice Partition Tolerance</a></li>
+<li><a href="https://bitcoin.org/bitcoin.pdf">Code: "11. Calcuations" Bitcoin whitepaper</a> The section where Nakamoto describes the race conditions needed to achieve a 51% attack.</li>
+<li><a href="https://arxiv.org/abs/1904.05234">Academic Article: Flash Boys 2.0</a> An in-depth discussion of the Miner Extracted Value theory.</li>
+<li><a href="https://github.com/flashbots/pm#resources">Wiki: Resources from Flashbots about MEV</a></li>
+<li><a href="https://medium.com/@danrobinson/ethereum-is-a-dark-forest-ecc5f0505dff">Article: Ethereum is a Dark Forest</a> A long narrative account describing white-hat hackers attempt to frontrun the frontrunners. A good primary account of the challenges of Miner Extracted Value.</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../q.%20More%20Forms%20of%20Consensus/" class="md-footer__link md-footer__link--prev" aria-label="Previous: More Forms of Consensus" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              More Forms of Consensus
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../s.%20Mental%20Model%20for%20Basic%20Blockchain%20Architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: Mental Model for Basic Blockchain Architecture" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mental Model for Basic Blockchain Architecture
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+    
+  </body>
+</html>

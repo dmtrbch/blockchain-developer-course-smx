@@ -1,0 +1,2612 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+    
+    
+      
+        <title>NFTs: More than Solidity Code - SMX Academy Blockchain Developer Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.9d5733d3.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nfts-more-than-solidity-code" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SMX Academy Blockchain Developer Course" class="md-header__button md-logo" aria-label="SMX Academy Blockchain Developer Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SMX Academy Blockchain Developer Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NFTs: More than Solidity Code
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmtrbch/blockchain-developer-course-smx/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dmtrbch/blockchain-developer-course-smx
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SMX Academy Blockchain Developer Course" class="md-nav__button md-logo" aria-label="SMX Academy Blockchain Developer Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    SMX Academy Blockchain Developer Course
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmtrbch/blockchain-developer-course-smx/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dmtrbch/blockchain-developer-course-smx
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Welcome!
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          1. Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="1. Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/1.%20Why%20to%20Learn%20Blockchain/" class="md-nav__link">
+        Why To Learn Blockchain?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/2.%20How%20to%20be%20Successful%20in%20this%20Course/" class="md-nav__link">
+        How to be Successful in this Course
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Introduction/3.%20Keeping%20Up%20With%20Blockchain%20Development/" class="md-nav__link">
+        Keeping Up With Blockchain Development
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          2. Fundamentals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="2. Fundamentals" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Fundamentals
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/a.%20A%20Paper%20Blockchain/" class="md-nav__link">
+        A Paper Blockchain
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/b.%20Fundamentals/" class="md-nav__link">
+        Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/c.%20Public%20Key%20Cryptography/" class="md-nav__link">
+        Public Key Cryptography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/d.%20Public%20Key%20Cryptography%20Additional/" class="md-nav__link">
+        Public Key Cryptography Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/e.%20Hashing/" class="md-nav__link">
+        Hashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/f.%20Hashing%20Additional/" class="md-nav__link">
+        Hashing Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/g.%20Digital%20Signatures/" class="md-nav__link">
+        Digital Signatures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/h.%20Digital%20Signatures%20Additional/" class="md-nav__link">
+        Digital Signatures Theory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/i.%20Consensus/" class="md-nav__link">
+        Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/j.%20Consensus%20Additional/" class="md-nav__link">
+        Distributed Coordination: Consensus Protocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/k.%20Raft/" class="md-nav__link">
+        Raft Consensus Tutorial
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/l.%20Trustless%20Consensus/" class="md-nav__link">
+        Trustless Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/m.%20What%20is%20a%20Block/" class="md-nav__link">
+        What is a Block?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/n.%20Chain%20of%20Blocks/" class="md-nav__link">
+        A Chain of Blocks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/o.%20PoW%20in%20Ethereum/" class="md-nav__link">
+        Proof of Work in Ethereum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/p.%20Blockchain%20Fork/" class="md-nav__link">
+        What is a Blockchain Fork?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/q.%20More%20Forms%20of%20Consensus/" class="md-nav__link">
+        More Forms of Consensus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/r.%20Consensus%20Conclusion/" class="md-nav__link">
+        Consensus Conclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/s.%20Mental%20Model%20for%20Basic%20Blockchain%20Architecture/" class="md-nav__link">
+        Mental Model for Basic Blockchain Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/t.%20Configurations%20for%20Different%20Blockchain%20Networks/" class="md-nav__link">
+        Configurations for Different Blockchain Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/u.%20Public%20and%20Private%20Blockchains/" class="md-nav__link">
+        Public and Private Blockchains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/v.%20When%20To%20Use%20a%20Blockchain/" class="md-nav__link">
+        When To Use a Blockchain?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/w.%20Bitcoin%20-%20History%20and%20Development/" class="md-nav__link">
+        Bitcoin: History and Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/x.%20Introduction%20to%20MetaMask/" class="md-nav__link">
+        Introduction to MetaMask
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2.%20Fundamentals/y.%20How%20Does%20MetaMask%20Keep%20Your%20Keys%20Safe/" class="md-nav__link">
+        How Does MetaMask Keep Your Keys Safe?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          3. Ethereum Basics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="3. Ethereum Basics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          3. Ethereum Basics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/a.%20Ethereum%20History%20and%20Background/" class="md-nav__link">
+        Ethereum History and Background
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/b.%20Identity%20on%20Ethereum%20Externally%20Owned%20Accounts%20%28EOAs%29%20and%20Smart%20Contracts/" class="md-nav__link">
+        Identity on Ethereum: Externally Owned Accounts (EOAs) and Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/c.%20Generating%20Ethereum%20Addresses/" class="md-nav__link">
+        Generating Ethereum accounts in JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/d.%20Nodes/" class="md-nav__link">
+        Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/e.%20Transactions/" class="md-nav__link">
+        Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/f.%20Gas%20and%20Fees/" class="md-nav__link">
+        Gas and Fees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/g.%20Ethereum%20Structure/" class="md-nav__link">
+        Ethereum Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/h.%20Ethereum%20Networks/" class="md-nav__link">
+        Ethereum Networks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/i.%20Sending%20Transactions/" class="md-nav__link">
+        Sending Transactions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/j.%20Merkle%20Trees/" class="md-nav__link">
+        Merkle Trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/k.%20Playing%20with%20Merkle%20Trees/" class="md-nav__link">
+        Playing with Merkle Trees
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/l.%20EIP-1559/" class="md-nav__link">
+        EIP-1559
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.%20Ethereum%20Basics/m.%20What%20is%20an%20Ethereum%20Client%20Running%20Go-Ethereum%20%28Geth%29/" class="md-nav__link">
+        What is an Ethereum Client? Running Go-Ethereum (Geth)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          4. Smart Contracts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="4. Smart Contracts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          4. Smart Contracts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/01.%20Where%20Do%20Smart%20Contracts%20Fit%20in%20Our%20Mental%20Model/" class="md-nav__link">
+        Where Do Smart Contracts Fit in Our Mental Model?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/02.%20Smart%20Contracts%20and%20the%20EVM/" class="md-nav__link">
+        Smart Contracts and the EVM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/03.%20Introduction%20to%20Remix/" class="md-nav__link">
+        Introduction to Remix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/04.%20Introduction%20to%20Truffle%20Suite%20%E2%80%94%20Part%201/" class="md-nav__link">
+        Introduction to Truffle Suite — Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/05.%20Introduction%20to%20Truffle%20Suite%20%E2%80%94%20Part%202/" class="md-nav__link">
+        Introduction to Truffle Suite — Part 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/06.%20Solidity%20Background%20and%20Context/" class="md-nav__link">
+        Solidity Background and Context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/07.%20Solidity%20Data%20Types%20and%20Variables/" class="md-nav__link">
+        Solidity Data Types and Variables
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/08.%20Solidity%20Functions/" class="md-nav__link">
+        Solidity Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/09.%20Solidity%20Storage%20and%20Memory/" class="md-nav__link">
+        Solidity Storage and Memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/10.%20Solidity%20Contract%20Structure/" class="md-nav__link">
+        Solidity Contract Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/11.%20Smart%20Contract%20ABI/" class="md-nav__link">
+        Smart Contract ABI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/12.%20Solidity%20Events%20and%20Logs/" class="md-nav__link">
+        Solidity Events and Logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/13.%20Solidity%20Factory%20Contracts/" class="md-nav__link">
+        Solidity Factory Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/14.%20Python%20in%20Ethereum%20Background%20and%20Context/" class="md-nav__link">
+        Python in Ethereum: Background and Context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/15.%20Vyper%20Overview/" class="md-nav__link">
+        Vyper Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/16.%20Design%20Patterns%20Introductory%20Smart%20Contracts/" class="md-nav__link">
+        Design Patterns: Introductory Smart Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/17.%20Inter-Contract%20Execution%20%E2%80%94%20Part%201/" class="md-nav__link">
+        Inter-Contract Execution — Part 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/18.%20Inter-Contract%20Execution%20%E2%80%94%20Part%202/" class="md-nav__link">
+        Inter-Contract Execution — Part 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/19.%20Inheritance%20and%20Interfaces/" class="md-nav__link">
+        Inheritance and Interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/20.%20Off-Chain%20Oracles/" class="md-nav__link">
+        Off-Chain Oracles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/21.%20Access%20Control%20Design%20Patterns/" class="md-nav__link">
+        Access Control Design Patterns
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/22.%20General%20Finance%20and%20Access%20Control%20Multi-Sig%20Tutorial/" class="md-nav__link">
+        General Finance: Multi-Sig
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/23.%20Upgradable%20Contracts/" class="md-nav__link">
+        Upgradable Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/24.%20Additional%20Material%20Upgradable%20Contracts/" class="md-nav__link">
+        Additional Material: Upgradable Contracts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/25.%20Optimizing%20Gas/" class="md-nav__link">
+        Optimizing Gas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/26.%20Smart%20Contract%20System%20Design/" class="md-nav__link">
+        Smart Contract System Design
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/27.%20Tutorial%20Proof%20of%20Existence/" class="md-nav__link">
+        Writing a Smart Contract (Proof of Existence Exercise)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/28.%20Smart%20Contract%20Best%20Practices/" class="md-nav__link">
+        Smart Contract Best Practices
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/29.%20Solidity%20Pitfalls%20and%20Attacks/" class="md-nav__link">
+        Solidity Pitfalls and Attacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/30.%20Smart%20Contract%20Pitfalls%20and%20Attacks/" class="md-nav__link">
+        Smart Contract Pitfalls and Attacks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/31.%20Smart%20Contract%20Safety%20Checklist/" class="md-nav__link">
+        Smart Contract Safety Checklist
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/32.%20tx.origin%20Attack%20Demo/" class="md-nav__link">
+        TxOrigin Attack (SWC-115)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/33.%20Denial%20of%20Service%20Attack%20Example/" class="md-nav__link">
+        DoS Attack Contract
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/34.%20Reentrancy%20Attack%20Example/" class="md-nav__link">
+        Reentrancy Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/35.%20Integer%20Under-Overflow%20Example/" class="md-nav__link">
+        Integer Over / Underflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/36.%20Security%20Introduction%20to%20Diligence%2C%20MythX%20and%20Scribble/" class="md-nav__link">
+        Security: Introduction to Diligence
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.%20Smart%20Contracts/37.%20Other%20Security%20Options/" class="md-nav__link">
+        Other Security Options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          5. Developer Tooling
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="5. Developer Tooling" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          5. Developer Tooling
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/01.%20Where%20Do%20Users%20Fit%20in%20Our%20Mental%20Model/" class="md-nav__link">
+        Where Do Users Fit in Our Mental Model?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/02.%20Features%20of%20Decentralized%20Application%20Development/" class="md-nav__link">
+        Features of Decentralized Application Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/03.%20Traditional%20vs%20Decentralized%20Development/" class="md-nav__link">
+        Traditional vs Decentralized Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/04.%20Agnostic%20Developer%20Workflow/" class="md-nav__link">
+        Blockchain Agnostic Developer Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/05.%20Web%203%20Javascript%20Libraries%20%28Web3.js%20and%20ethers.js%29/" class="md-nav__link">
+        Web 3 JavaScript Libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/06.%20Connecting%20to%20a%20Smart%20Contract%20Using%20Web3js/" class="md-nav__link">
+        Connecting to a Smart Contract Using Web3.js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/07.%20Introduction%20to%20Infura/" class="md-nav__link">
+        Introduction to Infura
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/08.%20TDD%20and%20Truffle%20Tests/" class="md-nav__link">
+        Testing, 1, 2, 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/09.%20Truffle%20Debugger%2C%20Configuration%2C%20Mainnet%20Forking/" class="md-nav__link">
+        Squashing Bugs with the Debugger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/10.%20Wire%20up%20the%20React%20app%20with%20Drizzle/" class="md-nav__link">
+        Wire up the React app with Drizzle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5.%20Developer%20Tooling/11.%20Other%20Development%20Tools%20Hardhat%2C%20Scaffold-Eth%2C%20Brownie/" class="md-nav__link">
+        Other Development Tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          6. Second Order Effects (DeFi and DAOs)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="6. Second Order Effects (DeFi and DAOs)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          6. Second Order Effects (DeFi and DAOs)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01.%20Second-Order%20Effects/" class="md-nav__link">
+        Second-Order Effects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.%20What%20is%20DeFi/" class="md-nav__link">
+        What is DeFi?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03.%20What%20are%20Stablecoins/" class="md-nav__link">
+        What are Stablecoins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NFTs: More than Solidity Code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        NFTs: More than Solidity Code
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-nfts" class="md-nav__link">
+    What are NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nft-hype-via-art" class="md-nav__link">
+    NFT Hype via Art
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-nfts" class="md-nav__link">
+    Why NFTS
+  </a>
+  
+    <nav class="md-nav" aria-label="Why NFTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telephone-problem-provenance" class="md-nav__link">
+    Telephone problem: Provenance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-costs-zero-pricing" class="md-nav__link">
+    Zero costs, zero pricing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-through-markets" class="md-nav__link">
+    Power through markets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#myths-legitimacy-and-coordination" class="md-nav__link">
+    Myths: Legitimacy and Coordination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-nfts" class="md-nav__link">
+    How to get NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-nfts" class="md-nav__link">
+    Creating NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-metaverse-gaming-and-nfts" class="md-nav__link">
+    The MetaVerse: Gaming and NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockchains-are-the-new-app-stores" class="md-nav__link">
+    Blockchains are the new app stores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defi-within-gaming-economies" class="md-nav__link">
+    DeFi within Gaming economies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.%20What%20are%20Wrapped%20Tokens/" class="md-nav__link">
+        What are Wrapped Tokens?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06.%20What%20are%20DEXes/" class="md-nav__link">
+        What are DEXes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07.%20Automated%20Market%20Makers%20-%20AMM/" class="md-nav__link">
+        Automated Market Makers - AMM
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08.%20Request%20for%20Quote/" class="md-nav__link">
+        Request for Quote
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09.%20Oracles%20in%20DeFi/" class="md-nav__link">
+        Oracles in DeFi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.%20DeFi%20Lending%20Markets/" class="md-nav__link">
+        DeFi Lending Markets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11.%20What%20are%20Governance%20Tokens/" class="md-nav__link">
+        What are Governance Tokens
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12.%20Introduction%20to%20MetaMask%20Swaps/" class="md-nav__link">
+        Introduction to MetaMask Swaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13.%20What%20are%20DAOs/" class="md-nav__link">
+        What are DAOs?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14.%20Build%20a%20DAO/" class="md-nav__link">
+        Build a DAO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15.%20Manage%20a%20DAO/" class="md-nav__link">
+        Manage a DAO
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          7. Additional Topics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="7. Additional Topics" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          7. Additional Topics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/01.%20Introduction%20to%20IPFS/" class="md-nav__link">
+        Introduction to IPFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/02.%20Filecoin/" class="md-nav__link">
+        Filecoin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/03.%20Ethereum%20Name%20Services/" class="md-nav__link">
+        Ethereum Name Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/04.%20The%20Graph/" class="md-nav__link">
+        The Graph
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7.%20Additional%20Topics/05.%20Zero-Knowledge%20Proofs/" class="md-nav__link">
+        Zero-Knowledge Proofs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          8. Layer 2 (L2) or Scalability Solutions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="8. Layer 2 (L2) or Scalability Solutions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          8. Layer 2 (L2) or Scalability Solutions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/01.%20Overview%20of%20L2%20Solutions/" class="md-nav__link">
+        Intro to Scalability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/02.%20Types%20of%20L2%20Solutions/" class="md-nav__link">
+        Types of Scaling Solutions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/03.%20Rubric%20for%20Evaluating%20L2%20Solutions/" class="md-nav__link">
+        Rubric for Analyzing Scalability Solutions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/04.%20L2%20Examples%20Optimism/" class="md-nav__link">
+        Optimism
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/05.%20L2%20Examples%20Arbitrum/" class="md-nav__link">
+        Arbitrum Example
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8.%20Layer%202%20%28L2%29%20or%20Scalability%20Solutions/06.%20Crosschain%20and%20Interoperability/" class="md-nav__link">
+        Crosschain Communication and Blockchain Interoperability
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          9. Ethereum 2.0 or The Merge
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="9. Ethereum 2.0 or The Merge" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          9. Ethereum 2.0 or The Merge
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/03.%20Future%20Considerations/" class="md-nav__link">
+        Future Considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/1.%20History%20and%20Roadmap/" class="md-nav__link">
+        A Brief History
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9.%20Ethereum%202.0%20or%20The%20Merge/2.%20Key%20Terms/" class="md-nav__link">
+        Key Terms for Ethereum 2.0
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-are-nfts" class="md-nav__link">
+    What are NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nft-hype-via-art" class="md-nav__link">
+    NFT Hype via Art
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-nfts" class="md-nav__link">
+    Why NFTS
+  </a>
+  
+    <nav class="md-nav" aria-label="Why NFTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#telephone-problem-provenance" class="md-nav__link">
+    Telephone problem: Provenance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-costs-zero-pricing" class="md-nav__link">
+    Zero costs, zero pricing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-through-markets" class="md-nav__link">
+    Power through markets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#myths-legitimacy-and-coordination" class="md-nav__link">
+    Myths: Legitimacy and Coordination
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-get-nfts" class="md-nav__link">
+    How to get NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-nfts" class="md-nav__link">
+    Creating NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-metaverse-gaming-and-nfts" class="md-nav__link">
+    The MetaVerse: Gaming and NFTs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blockchains-are-the-new-app-stores" class="md-nav__link">
+    Blockchains are the new app stores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defi-within-gaming-economies" class="md-nav__link">
+    DeFi within Gaming economies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional Resources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/dmtrbch/blockchain-developer-course-smx/tree/main/docs/6. Second-Order Effects (DeFi and DAOs)/04. NFTs More than Solidity Code.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="nfts-more-than-solidity-code">NFTs: More than Solidity Code</h1>
+<h2 id="what-are-nfts">What are NFTs</h2>
+<p>An engineer walks into a meetup. How do we explain the significance of NFTs? Why are NFTs useful? Let's explain!</p>
+<p>Non-fungible tokens or NFTs are more than just code. NFTs are smart contract representations of unique and non-fungible items. <a href="https://www.investopedia.com/terms/f/fungibility.asp" target="_blank">Fungibility</a> is characterized by goods being uniform in their properties, interchangeable, and indistinguishable from each other. Examples of fungibility include US Dollars or Coca-Cola bottles.</p>
+<p>NFTs can represent ownership of digital scarce goods like <a href="https://nypost.com/2021/08/23/visa-buys-digital-artwork-token-cryptopunk-for-150k/" target="_blank">art</a>, <a href="https://dappradar.com/blog/how-to-value-sorare-nfts" target="_blank">collectables</a> or any unique non-fungible item. They can also represent <a href="https://www.theblockbeats.com/en/news/24141" target="_blank">unique trading positions on a bonding curve like Uniswap v3</a>, <a href="https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6" target="_blank">intellectual property</a>, <a href="https://blog.oceanprotocol.com/nfts-ip-3-combining-erc721-erc20-b69ea659115e" target="_blank">licenses</a>, <a href="https://docs.yearn.finance/resources/defi-glossary#yinsure" target="_blank">insurance</a>, options, bonds, real estate, <a href="https://www.lexology.com/library/detail.aspx?g=73db4ff0-c146-4f7c-9ccf-1dd621aeef17" target="_blank">game items</a>, deeds, <a href="https://unstoppabledomains.com/blog/what-are-blockchain-domain-nfts-a-full-introduction" target="_blank">domain names</a> and more. Even when considering two identical collectables, other factors can make them unique, like their <a href="https://www.nationalgallery.org.uk/paintings/glossary/provenance#:~:text=Provenance%20refers%20to%20the%20history,themselves%20and%20auction%20sale%20catalogues." target="_blank">provenance</a>, history, year of production and more.</p>
+<p>NFTs are created with the <a href="https://ethereum.org/en/developers/docs/standards/tokens/erc-721/" target="_blank">ERC-721</a> standard. Popularized by CryptoKitties in 2017, they share these properties:</p>
+<ul>
+<li>Unique, with their particular qualities usually stored in the metadata</li>
+<li>Indivisible since they cannot be split up.</li>
+<li>Provably scarce. Usually, one or a limited number of NFTS and can be verified on-chain</li>
+<li>Provable ownership, since you check on-chain</li>
+<li>Fraud proof. They can't be faked. We will cover some issues around this later.</li>
+<li>Easily transferable</li>
+</ul>
+<p><a href="https://enjin.io/about/erc-1155" target="_blank">ERC-1155</a> further builds upon ERC-721 and allows for mixed-use of fungible and non-fungible tokens, <a href="https://enjin.io/about/erc-1155" target="_blank">among other features</a>. You can <a href="https://www.numbrs.com/tech/2021/04/28/ethereums-standards-for-non-fungible-tokens-erc-721-and-erc-1155/" target="_blank">explore the difference between 721 and 1155 here</a>. You can also <a href="https://academy.ivanontech.com/blog/non-fungible-tokens-explaining-nfts-erc-721-and-erc-1155" target="_blank">see the difference between all three standards and their use cases</a>. ERC-1155 was created by <a href="https://enjin.io/about/erc-1155" target="_blank">Enjin</a> and can be used in gaming, so non-fungible items like a player or item can hold fungible assets like gold or coins. We will see later on how this is applicable.</p>
+<h2 id="nft-hype-via-art">NFT Hype via Art</h2>
+<p>Maybe you have heard of <a href="https://www.christies.com/features/10-things-to-know-about-CryptoPunks-11569-1.aspx" target="_blank">Crypto Punks</a>, <a href="https://www.npr.org/2021/04/30/992383825/disaster-girl-the-stuff-of-memes-sells-for-nearly-500-000-as-nft" target="_blank">Disaster Girl NFT</a>, <a href="https://www.theverge.com/2021/3/11/22325054/beeple-christies-nft-sale-cost-everydays-69-million" target="_blank">Beeple’s 69 million dollar NFT</a>, <a href="https://consensys.net/blog/press-release/palm-a-new-nft-ecosystem-and-studio-for-creators-announces-launch-of-first-project-with-damien-hirst/" target="_blank">Damien Hirst’s NFTs</a>, <a href="https://www.benzinga.com/markets/cryptocurrency/21/08/22606848/logan-paul-chris-camillo-buy-bored-ape-yacht-club-nfts-floor-rises-what-investors-should-k" target="_blank">Bored Yacht Club</a>, <a href="https://www.rarepizzas.com/" target="_blank">RarePizzas</a>, <a href="https://www.coindesk.com/pudgy-penguins-bored-apes-nft-new-boom" target="_blank">Pudgy Penguins</a>, <a href="https://eulerbeats.com/" target="_blank">EulerBeats</a> and <a href="https://foundation.app/@pplpleasr" target="_blank">pplpleasr</a>? Even <a href="https://foundation.app/@Snowden/stay-free-edward-snowden-2021-24437" target="_blank">Edward Snowden</a> and <a href="https://opensea.io/" target="_blank">others</a> have found a new market for their art. Haven’t heard of them? You can get hip to it on <a href="https://consensys.net/blog/news/i-read-crypto-twitter-for-hours-daily-here-are-the-40-accounts-that-really-matter/" target="_blank">CryptoTwitter</a>, sign up for <a href="https://metaversal.banklesshq.com/?utm_source=substack&amp;utm_medium=menu" target="_blank">Bankless’s MetaVersal newsletter </a>or use <a href="https://nonfungible.com/" target="_blank">Non-fungible.com</a> for real time digital asset tracking to help you to navigate NFT markets.</p>
+<p><img alt="Disater Girl NFT" src="https://lh6.googleusercontent.com/egaC09kd_93f6IMFPs3-6O8SxndpXrcDR7HW8SiW7584esRHV6wwFmDee_MG9qajbO7GgiI2KTj92Xf1JQB7afjlULIRRXH1h4J9ICdPT7wCRtz3j_okYKDyqsj-KELmzaDgS_nR=s0" target="_blank" /></p>
+<p>What's the deal with the hype? Why is this so important? First, you may want to learn the quick <a href="https://blog.portion.io/the-history-of-nfts-how-they-got-started/" target="_blank">History of NFTs via Potion</a>. Then, two highly recommended videos on NFTs that can explain more are <a href="https://www.youtube.com/watch?v=XqveU599ojg" target="_blank">The Defiant Guide to Digital Art and NFTs</a> and <a href="https://www.youtube.com/watch?v=cY9lM73ie0Q" target="_blank">The Greatest NFT Film Ever Made by The Defiant</a>.</p>
+<p>The most prolific and accessible usage of NFTs is art and gaming. What is art? According to Andy Warhol, "Art is what you can get away with". The <a href="https://en.wikipedia.org/wiki/The_medium_is_the_message" target="_blank">message can be the medium</a> as <a href="https://emptyeasel.com/2007/05/22/andy-warhol-mass-produced-art-with-popular-appeal/" target="_blank">Andy Wahorl proved by using mass production and consumerism in his art</a>.</p>
+<p>How are they a better way than just releasing art on the internet?</p>
+<h2 id="why-nfts">Why NFTS</h2>
+<h3 id="telephone-problem-provenance">Telephone problem: Provenance</h3>
+<p>Ethereum also solves the "telephone problem", where information is changed over time. Since Ethereum has an immutable ledger, one could track changes to historical digital artefacts over time. Most importantly, it can track provenance for items, whether cultural or utilitarian, like olive oil. This is important because Ethereum can be used as a store of historical value, like culture.</p>
+<h3 id="zero-costs-zero-pricing">Zero costs, zero pricing</h3>
+<p>The internet of information allowed anyone to disseminate culture. Easy copying means that due to the near-zero cost of replicating information, the value of any art that could be digitized is reduced close to zero. Additionally, any value accrued was captured by the middlemen who controlled the servers and could set the market rules. Even with strong branding and engagement, the middlemen can extract large amounts of value, as we will see in the following section.</p>
+<h3 id="power-through-markets">Power through markets</h3>
+<p>The properties of Ethereum change this. The commoditization of network servers and databases through a single world computer allows the artist to move between providers. Enforced digital scarcity limits authentic copies and enforces legitimacy and social signalling. Programmable smart contracts enable creators to set the rules of the game for their art and capture value how they see fit. In theory, this means being paid every time the art changes owners, not just on the first sale. It also means that the art can carry its own set of tokenomics, creating hype via price action.</p>
+<p>Ownership means that the asset can be used as collateral, rented, or licensed in a digitally enforced manner. These are unique only to blockchain-based networks. With <a href="https://eips.ethereum.org/EIPS/eip-2981" target="_blank">EIP-2981- The Royalty Standard</a>, creators can enable universal support for <a href="https://consensys.net/blog/blockchain-explained/can-nfts-crack-royalties-and-give-more-value-to-artists/" target="_blank">royalty payments</a> across all NFT marketplaces and ecosystem participants. This solves the problem of being tied to any NFT marketplace, which we will discuss later. In addition, creators can leverage <a href="https://eips.ethereum.org/EIPS/eip-2615" target="_blank">EIP-2615 - The Non-Fungible Token with mortgage and rental functions</a> to turn their NFTs into streams of income. These EIPs can be helpful in art markets as well as gaming economies, as we shall see.</p>
+<p>There are <a href="https://consensys.net/blog/codefi/roi-opportunities-for-nfts/" target="_blank">various ways users and artists can make money off NFTs</a>. Services like <a href="https://www.renft.io/" target="_blank">reNFT</a> allow users to rent their NFTs. <a href="https://nftfi.com/" target="_blank">NFTfi</a> enables users to use them as collateral. This solves the issue of using assets with potentially illiquid markets for collateralized loans. Don't know what NFT to buy or don't have enough cash to buy a whole one? <a href="https://nftx.org/" target="_blank">NFTx</a> allows users to mint and buy into decentralized NFT index funds that fractionalize NFTs into ERC-20 tokens.</p>
+<p>Platforms like <a href="https://rarible.medium.com/introducing-rari-the-first-governance-token-in-the-nft-space-5dbcc55b6c43" target="_blank">Rariable</a> and <a href="https://www.unic.ly/" target="_blank">Unicly</a> even engage in a liquidity mining program to incentivize users to buy and sell NFTs in exchange for tokens. These can be used for governance or sold on open markets.</p>
+<p>Ethereum can help decentralize art markets and games, giving artists and users/collectors a more direct connection, reducing dominant brokers' cartel-like behaviour. It also unites fragmented markets by placing them on the internet <a href="https://consensys.net/blog/news/why-nfts-not-defi-brought-ethereum-to-the-mainstream/" target="_blank">and helping to bring a new crowd to Ethereum</a>. In the process, users begin to understand decentralization and are exposed to DeFi-like mechanics.</p>
+<h2 id="myths-legitimacy-and-coordination">Myths: Legitimacy and Coordination</h2>
+<p>Why is disseminating culture important? Myths are all around us. They inform and are part of the substrate of our belief and value systems. Pragmatically speaking, it's why people attach value to Yeezys or Balenciaga. Or why they choose Harvard over their local state college. It's why Jordans have a better cultural cache than Shaqs. According to <a href="https://fs.blog/2016/01/why-humans-dominate-earth/" target="_blank">Yoval Noah Harari in his book Sapiens</a>, myths are social fiction that allows humans to scale collaboration from small tribes to millions of people.</p>
+<p>Legitimacy is what separates the in-group from the outgroup. It keeps the imposters who wish to mimic and gain a group's benefits without the costs. <a href="https://vitalik.ca/general/2021/03/23/legitimacy.html" target="_blank">Legitimacy underpins social signalling, which allows for coordination between groups</a>. We find <a href="https://en.wikipedia.org/wiki/Signalling_(economics){target=_blank}" target="_blank">social signalling</a> in economics and <a href="https://psychology.wikia.org/wiki/Signalling_theory" target="_blank">evolutionary biology</a>. On a practical level, NFTs make it easier to call out posers. Or as they say, "You gotta pay the cost to be da boss". Being provable scarce allows for legitimacy to be enforced. However, this is not to say that the technology is perfect. There are some issues with using NFTs to prove outright authenticity, as <a href="https://www.theverge.com/2021/3/20/22334527/nft-scams-artists-opensea-rarible-marble-cards-fraud-art" target="_blank">fraudsters try to impersonate others and reupload their works</a>.</p>
+<p>Myths &gt; values &gt; choice &gt; signalling &gt; legitimacy &gt; coordination.</p>
+<p><img alt="myths-quote" src="/docs/img/S05/myths-quote.png" /></p>
+<p><a href="https://twitter.com/punk6529/status/1424127515476598796" target="_blank">@punk6929 in this tweet thread 🧵 </a> beautifully sums up the role of NFTs in creating culture, myths and scaling human collaboration.</p>
+<p>Myth Building, or "branding and marketing", allows companies to place a logo on an item and charge the idea. It allows celebrities to earn hefty sums of money for a brand's association with them. Myths underpin even cryptocurrencies if we take a look at Bitcoin or Dogecoin.</p>
+<p><img alt="jordan-nft-quote" src="/docs/img/S05/jordan-nft-quote.png" target="_blank" /></p>
+<p>Myths inform branding, which informs a user's choices based on their values. Creators can be artists or scientists. NFTs can even give control to creators of <a href="https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6" target="_blank">scientific intellectual property</a>. Ultimately, NFTs give the economics and control of these myths to their creators 💪.</p>
+<p>They can be used in conjunction with DAO to create art to fund causes like how <a href="https://www.rarepizzas.com/" target="_blank">Rare Pizzas</a> uses <a href="https://thespoon.tech/the-creators-behind-rare-pizzas-want-to-use-pizza-art-nfts-to-fund-a-global-real-world-pizza-party/" target="_blank">NFTs to fund free pizza for people on Bitcoin Pizza Day</a>. Or <a href="https://flamingodao.xyz/" target="_blank">FlamingoDAO to fund NFTs</a>.</p>
+<h2 id="how-to-get-nfts">How to get NFTs</h2>
+<p>There are various places where you buy or sell NFTs. Check out the links for guides on leading platforms <a href="https://consensys.net/blog/metamask/explore-the-vast-ocean-of-nfts-with-opensea/" target="_blank">OpenSea</a>, <a href="https://consensys.net/blog/metamask/how-to-buy-nfts-on-foundation-using-metamask/" target="_blank">Foundation</a>, <a href="https://newsletter.banklesshq.com/p/how-to-make-money-with-digital-art" target="_blank">Rarible</a>, <a href="https://metaversal.banklesshq.com/p/how-to-mint-nfts-on-zora" target="_blank">Zora</a>, <a href="https://newsletter.banklesshq.com/p/how-to-make-money-on-digital-art" target="_blank">SuperRare</a>, <a href="https://www.youtube.com/watch?v=oZgobGr77NI" target="_blank">Mintable</a>, or <a href="https://palm.io/studio/palm-token-bridge/" target="_blank">Palm NFT Sidechain</a>. Get a <a href="https://consensys.net/blog/codefi/how-nft-art-marketplaces-are-merging-with-defi/" target="_blank">deep dive into the status of the industry here</a>.</p>
+<p>As convenient as these platforms are, <a href="https://blog.portion.io/the-pitfalls-of-centralized-nft-platforms/" target="_blank">there are issues with them</a>. Some of these issues relate to centralization risk, which increases censorship or your assets being deleted. Some platforms control your keys, which means you don't really own the NFT. There is a lack of data portability fragments markets and limits royalties between platforms. Finally, there is a centralization risk with any data which underpins the NFT could also be stored on a centralized server.</p>
+<p>In the next part, we will see how to create an NFT and leverage tools to decentralize your assets.</p>
+<h2 id="creating-nfts">Creating NFTs</h2>
+<p>You can create your own NFTs! Learn how to <a href="https://ethereum.org/en/developers/tutorials/how-to-write-and-deploy-an-nft/" target="_blank">create your own NFT via Ethereum.org</a>. Furthermore, you can host them on a decentralized file storage solution like <a href="https://nft.storage/" target="_blank">NFT.storage</a>. It’s powered by <a href="https://ipfs.io/" target="_blank">IPFS</a> and <a href="https://filecoin.io/" target="_blank">Filecoin</a>. To set up, go through the <a href="https://nft.storage/#docs" target="_blank">nft.storage</a> instructions. Want to learn more? Go to <a href="https://nftschool.dev/" target="_blank">nftschool.dev</a> to learn about best practices. Feel free to check out the <a href="https://github.com/truffle-box/filecoin-box" target="_blank">Filecoin Truffle Box</a> and <a href="https://docs.google.com/presentation/d/1n3ZgZ-b5P6B_fRhKP5t7evPxZJuLC3cnRqMQMduAbTk/edit#slide=id.p" target="_blank">these set up instructions</a>.</p>
+<p>But what about art? You can use Adobe Photoshop or open-source tools like <a href="https://www.gimp.org/" target="_blank">GIMP</a> image editor or <a href="https://www.blender.org/" target="_blank">Blender</a> for 3D creation. Pro tip: you can check out the Decentraland Discord and ask what tools developers use to build things.</p>
+<p>Want to go the programmatic route to create NFTs like <a href="https://www.reddit.com/r/NFT/comments/mu1azt/my_first_generative_art_mint_on_foundation_made/" target="_blank">this generative art example</a> or <a href="https://www.reddit.com/r/NFTsMarketplace/comments/mu6gz3/my_first_generative_art_mint_on_foundation_made/" target="_blank">this example</a>? <a href="https://en.wikipedia.org/wiki/Generative_art#:~:text=Generative%20art%20refers%20to%20art,made%20directly%20by%20the%20artist." target="_blank">Generative Art</a> let's the code create the art. Use <a href="https://p5js.org/" target="_blank">P5.js</a>, the JavaScript library, for creating coding. It focuses on making coding accessible for artists, designers, beginners and anyone else! See a <a href="https://www.youtube.com/watch?v=me04ZrTJqWA" target="_blank">great example of generative art here</a>.</p>
+<p><a href="https://shiffman.net/" target="_blank">Dan Shiffman</a>, the creator of <a href="https://thecodingtrain.com/" target="_blank">The Coding Train</a>, has <a href="https://www.youtube.com/watch?v=HerCR8bw_GE&amp;list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA" target="_blank">the most comprehensive videos on how to use P5.js on the internet</a>. He also has some of the best and most ENTERTAINING videos on learning to code. In addition, he wrote a fantastic book called <a href="https://natureofcode.com/book/" target="_blank">The Nature of Code</a>, which shows you how to model nature with JavaScript. The book has a <a href="https://www.youtube.com/watch?v=70MQ-FugwbI&amp;list=PLRqwX-V7Uu6ZV4yEcW3uDwOgGXKUUsPOM" target="_blank">video series</a> you can follow along. If you can support his channel, please donate to support his work ♥️.</p>
+<p>You can combine <a href="https://www.youtube.com/watch?v=wB1pcXtEwIs" target="_blank">P5.js with physics libraries</a> like <a href="https://www.youtube.com/watch?v=urR596FsU68" target="_blank">Matter.js</a> or PhysicsJS. For a 3D library, you can try out ThreeJS. You can check out <a href="https://www.youtube.com/watch?v=3obwBHN4RgA" target="_blank">this tutorial to see how to create generative art using P5.js and React, mint an NFT and host it on your website</a>. Also, check out <a href="https://beyondnft.io/create" target="_blank">BeyondNFT to learn how to build interactive NFTs with p5JS and ThreeJS</a>.</p>
+<p>How about using <a href="https://www.youtube.com/watch?v=Qt3ZABW5lD0" target="_blank">TensorFlowJS</a> to get user input and try to figure out how to get interactions with your NFTs. Maybe, they can "learn" from their users and record some version of that data on-chain 🤷‍♂️.</p>
+<p>You can also <a href="https://medium.com/aisthisi/aisthisi-technical-deep-dive-part-2-5250b0d71ee" target="_blank">explore how to add royalties for various platform secondary sales with this tutorial</a>.</p>
+<p>What if you can go beyond NFTs and create in-game assets that can make money?</p>
+<p><img alt="|250x249" src="https://lh5.googleusercontent.com/Z6s1gBKrQnWP1LcqdfkMf342woynzwOcv4krmajmlRWqgXvYf3sOXdE9ajuSfeCJggmdPb3Ac4iCHd3wKiMSG-Vqkn643yNkCoyXnuoJ-XBwCuv_6VMp69JbIouZrGpQ0JSLzskI=s0" /></p>
+<h2 id="the-metaverse-gaming-and-nfts">The MetaVerse: Gaming and NFTs</h2>
+<p>Fun fact: the genesis of Ethereum sort of started with games. Vitalik Buterin discovered <a href="https://cointelegraph.com/ethereum-for-beginners/who-is-vitalik-buterin" target="_blank">the evils of centralized entities after losing his World of Warcraft assets</a>. The <a href="https://blog.portion.io/the-history-of-nfts-how-they-got-started/" target="_blank">first NFTs were created by a blockchain-based game called CryptoKitties</a>. Enjin created the ERC1155 standard for gaming applications.</p>
+<p>Turns out, <a href="https://www.yahoo.com/now/blockchain-games-nfts-integral-part-153545092.html" target="_blank">NFTs are a crucial building block</a> to the <a href="https://en.wikipedia.org/wiki/Metaverse" target="_blank">metaverse</a> and in-game economies. AXIE Infinity is proving to <a href="https://decrypt.co/76333/crypto-game-axie-infinity-has-generated-84-9m-one-month" target="_blank">be the killer app of Gaming and NFTs</a>, with <a href="https://thedefiant.io/axie-infinity-revenue-beats-ethereum/" target="_blank">more revenue than Uniswap and even Ethereum itself</a>. Gaming is the best place due to feedback loops and the utility of the NFT. In-game items can be represented as NFTs. A game's feedback loop keeps the users engaged and can give added value to the NFTs. Straight out of the book <a href="https://en.wikipedia.org/wiki/Ready_Player_One" target="_blank">Ready Player One</a>, play-to-earn is an emerging phenomenon where <a href="https://www.youtube.com/watch?v=Yo-BrASMHU4" target="_blank">people playing games are earning more than the average income in some developing nations</a>.</p>
+<p><img alt="|479x217" src="https://lh4.googleusercontent.com/8A6Ev7tzhnfhtkQG-dygcY5omyMlkoKY43mQAE7R6woVV0HOhd6GVAVJHxuTUCHo0vMgqj052Dh8b-j8wQoM31Od7f6y8juanQKtmFuF82tOAVz9750gUjU-iBLxsSsmhnQjzzkz=s0" /></p>
+<p>Massively multiplayer online role-playing games like <a href="http://www.todayifoundout.com/index.php/2019/03/that-time-a-video-game-had-an-economy-almost-as-strong-as-russia/" target="_blank">Everquest</a>, <a href="https://joshkaufman.net/everything-i-know-about-business-i-learned-from-world-of-warcraft/" target="_blank">World of Warcraft</a>, <a href="https://www.youtube.com/watch?v=ijhAILUNz_s" target="_blank">EVE Online</a>, have already had internal game economies for years. <a href="https://www.investopedia.com/tech/how-does-fortnite-make-money/" target="_blank">Fortnite</a> and <a href="https://www.statista.com/statistics/1190638/quarterly-revenue-roblox-corporation/" target="_blank">Roblox</a> make massive amounts of money. These game economies can <a href="https://conf.splunk.com/files/2020/slides/PLA1729C.pdf" target="_blank">yield interesting data</a>. However, centralization plagues the game creators and players themselves. Game developers can act as central banks and skew imperfect "markets". Game developers themselves have to fork over tons of money to app stores. Worst of all, markets don't exist since players can't trade with each other.</p>
+<p><img alt="|624x89" src="https://lh3.googleusercontent.com/XJJ_9gM0HJdRbsLA8TVIgoLQv4dkAsxT3Ashp0I_75FFx_yR0hh_8k4xGDplzStqsLXjZwtV7f4jOkAHsMGO5MCv4d8wBE6_U0kK6yin4ulQ9coZVSDNGh1vunJg8a1PinU5JwWM=s0" /></p>
+<h2 id="blockchains-are-the-new-app-stores">Blockchains are the new app stores</h2>
+<p>Fortnite, Roblox, and other games have to pay massive fees to centralized app store providers for all the money they make. <a href="https://developer.roblox.com/en-us/articles/developer-economics" target="_blank">Roblox pays 24%</a> of all money generated to App Stores. <a href="https://www.cnn.com/2021/02/10/tech/tim-sweeney-epic-games-risk-takers/index.html" target="_blank">Fortnite famously sued Google and Apple for the large cut they took</a>.</p>
+<p><img alt="|624x271" src="https://lh4.googleusercontent.com/YUjZ2E_LErKoSUdy_sAFcv16vj9FQO34TE1hQZsNExiCY5IpUNrFHryYFjssC-QjXjDB5oQJhd0cQNO8FUGgQf6lJOdn3IBEPs7h6F9mX-oEizHE4cvKma7HW7T6hTbCsYEQevbq=s0" /></p>
+<p>See <a href="https://twitter.com/cdixon/status/1427452472046493704" target="_blank">Chiris Dixon's thread 🧵</a></p>
+<p>Blockchain-based games can solve a lot of market-based problems caused by centralized games for users and games. Costly fees could be avoided. Better <a href="https://blog.godsunchained.com/ethereum-is-the-future-of-gaming%E2%80%8A-%E2%80%8Aand-wed-like-to-prove-it/" target="_blank">player-led internal economies where users own their assets forever</a> and freely trade with each other. Games and assets can be transferred between platforms. Third-party developers won't have to worry about changing in-game economics.</p>
+<h2 id="defi-within-gaming-economies">DeFi within Gaming economies</h2>
+<p>Games like <a href="https://www.decentralised.co/the-economics-behind-axie-infinity/" target="_blank">AXIE Infinity</a>, <a href="https://tokeneconomy.co/decentraland-lords-9953d0de1e5c" target="_blank">Decentraland</a>,and <a href="https://godsunchained.com/" target="_blank">Gods Unchained</a> build <a href="https://andrewsteinwold.substack.com/p/-the-scarce-web" target="_blank">actual in-game economies</a> where players can trade. Decentralized App stores like <a href="https://metazone.io/" target="_blank">MetaZone</a> are emerging where users can create assets for open-world games. By using DeFi patterns like AMMs, lending markets, index funds, using assets as collateral, users can help manage their economies. Emerging standards around rental, royalty will expand the ways users can play games to earn money. That way, the rewards of this cultural product can go to the creators and players, not just the game companies.</p>
+<p>These in-game economies grow because of the demand for scarce assets. Internal economies can use the existing DeFi patterns we have seen to help this. However, different games will have fragmented liquidity and assets since they would conceivably use their own custom EVM compatible chain. Using cross-chain lending markets and yield farming for in-game assets sounds familiar to cross-chain yield farming or lending markets in DeFi. Projects like Yield Guild are looking to help fix this issue. Worst case scenario, all these assets can convert to ETH, and we would see network effects between games and other ecosystems.</p>
+<p>We have already seen tokenized real estate in games like Decentraland. Out of this is <a href="https://metaverse.properties/rent-in-decentraland/" target="_blank">emerging rental agreements</a>, which could eventually be applied in other scenarios. Rental income can allow for usage of NFT to earn a yield and split the income to the originator. Say if one rents a plot of land on a digital game like Decentraland, and an NFT represents that plot. Lending markets would allow players to rent assets and share the profits, or XP points can be another application. You can even <a href="https://nftplazas.com/promotion/" target="_blank">buy ad space within Decentraland</a>.</p>
+<p>Over time, it will be easy to see how game guilds could transform into DAO managing, trading, collaborating, and competing over resources. This sounds a lot like modern companies. And it all happened with memes and magical internet money.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li>
+<p><a href="https://nftschool.dev/" target="_blank">NFT School via nftschool.dev</a></p>
+</li>
+<li>
+<p><a href="https://blog.portion.io/the-history-of-nfts-how-they-got-started/" target="_blank">The History of NFTs via Potion</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=XqveU599ojg" target="_blank">The Defiant Guide to Digital Art and NFTs</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=cY9lM73ie0Q" target="_blank">The Greatest NFT Film Ever Made by The Defiant</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=GdGseBuuq_I&amp;t=2329s" target="_blank">Mark Cuban on Digital Collectables via The Defaint</a></p>
+</li>
+<li>
+<p><a href="https://vitalik.ca/general/2021/03/23/legitimacy.html" target="_blank">The Most Important Scarce Resource is Legitimacy by Vitalik Buterin</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=mr_Xc_a1mKI&amp;t=5262s" target="_blank">Legitimacy | Vitalik Buterin via Bankless</a></p>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../03.%20What%20are%20Stablecoins/" class="md-footer__link md-footer__link--prev" aria-label="Previous: What are Stablecoins" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              What are Stablecoins
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../05.%20What%20are%20Wrapped%20Tokens/" class="md-footer__link md-footer__link--next" aria-label="Next: What are Wrapped Tokens?" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              What are Wrapped Tokens?
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      
+    
+  </body>
+</html>
